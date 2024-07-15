@@ -7,42 +7,59 @@
     <body>
         <%- include('../components/nav.ejs'); %>
         <section class="section pageheader" id="pageheader">
-            <div class="content-wrapper">
-                <div class="col-left">
-                    <div class="content">
-                        <div class="intro-text">
-                            <p class="gradient greeting">Goedemiddag!</p>
-                            <h1>Ik ben Martijn Kooijman, <span class="gradient">Front-end Developer & UI/UX Designer</span></h1>
-                            <p>Leuk dat je interesse hebt in mijn portfolio! Ik ben een gepassioneerde Front-end developer en UX/Designer. Momenteel volg ik de opleiding Communicatie & Multimedia Design
-                                op de Hogeschool van Amsterdam. Kijk gerust even rond!
-                            </p>
-                            <div class="button-wrapper">
-                                <a href="#" class="btn"><i class="fa-solid fa-eye"></i> Bekijk CV</a>
-                                <a href="tel:+31612345678" class="btn btn-outline"><i class="fa-solid fa-phone"></i> Geef een belletje!</a>
+            <div class="container">
+                <div class="content-wrapper">
+                    <div class="col-left">
+                        <div class="content">
+                            <div class="intro-text">
+                                <p class="gradient greeting">Goedemiddag!</p>
+                                <h1>Ik ben Martijn Kooijman, <span class="gradient">Front-end Developer & UI/UX Designer</span></h1>
+                                <p>Leuk dat je interesse hebt in mijn portfolio! Ik ben een gepassioneerde Front-end developer en UX/Designer. Momenteel volg ik de opleiding Communicatie & Multimedia Design
+                                    op de Hogeschool van Amsterdam. Kijk gerust even rond!
+                                </p>
+                                <div class="button-wrapper">
+                                    <a href="#" class="btn"><i class="fa-solid fa-eye"></i> Bekijk CV</a>
+                                    <a href="tel:+31612345678" class="btn btn-outline"><i class="fa-solid fa-phone"></i> Geef een belletje!</a>
+                                </div>
+                                <img src="./img/arrow.svg" alt="">
                             </div>
-                            <img src="./img/arrow.svg" alt="">
-                        </div>
-                        <div class="socials">
-                            <a href="https://nl.linkedin.com/in/martijn-kooijman-604040155" target="_blank" rel="noopener noreferrer" class="social-link">
-                                <div class="social-icon">
-                                    <i class="fa-brands fa-linkedin-in"></i>
-                                </div>
-                            </a>
-                            <a href="https://github.com/Martino538" target="_blank" rel="noopener noreferrer" class="social-link">
-                                <div class="social-icon">
-                                    <i class="fa-brands fa-github"></i>
-                                </div>
-                            </a>
-                            <a href="https://www.instagram.com/_martijnk/" target="_blank" rel="noopener noreferrer" class="social-link">
-                                <div class="social-icon">
-                                    <i class="fa-brands fa-instagram"></i>
-                                </div>
-                            </a>
+                            <div class="socials">
+                                <a href="https://nl.linkedin.com/in/martijn-kooijman-604040155" target="_blank" rel="noopener noreferrer" class="social-link">
+                                    <div class="social-icon">
+                                        <i class="fa-brands fa-linkedin-in"></i>
+                                    </div>
+                                </a>
+                                <a href="https://github.com/Martino538" target="_blank" rel="noopener noreferrer" class="social-link">
+                                    <div class="social-icon">
+                                        <i class="fa-brands fa-github"></i>
+                                    </div>
+                                </a>
+                                <a href="https://www.instagram.com/_martijnk/" target="_blank" rel="noopener noreferrer" class="social-link">
+                                    <div class="social-icon">
+                                        <i class="fa-brands fa-instagram"></i>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-right">
-                    <img src="./img/martijn-front.png" alt="">
+                    <div class="col-right">
+                        <div class="hex">
+                            <svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                <defs>
+                                    <filter id="goo">
+                                        <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur" />
+                                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+                                        <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+                                    </filter>
+                                </defs>
+                            </svg>
+                            <div class="hex-inner">
+                                <div class="content">
+                                    <img src="./img/martijn-front.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
