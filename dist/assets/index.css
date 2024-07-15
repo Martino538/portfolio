@@ -260,9 +260,15 @@ body {
     padding: 0 250px;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
     .container {
         padding: 0 20px;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        padding: 0 75px;
     }
 }
 
@@ -297,7 +303,9 @@ section:nth-of-type(3), section:nth-of-type(5) {
 
 .button-wrapper {
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
+    width: 100%;
 }
 
 .btn {
@@ -335,6 +343,12 @@ a {
 
     section:nth-of-type(3), section:nth-of-type(5) {
         padding-top: 75px;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    h1 {
+        font-size: 40px;
     }
 }
 
@@ -572,10 +586,6 @@ nav {
     transform: rotate(-20deg);
 }
 
-.pageheader .content-wrapper .col-left .content {
-    padding-left: 250px;
-}
-
 .intro-text p:first-of-type {
     font-size: 26px;
 }
@@ -619,7 +629,7 @@ nav {
     width: 90%;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
     .pageheader {
         padding-top: 75px;
         height: fit-content;
@@ -666,6 +676,12 @@ nav {
 
     .pageheader .content-wrapper .col-right img {
         width: 100%;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .pageheader .content-wrapper .col-left .content {
+        padding-left: 75px;
     }
 }
 
@@ -774,7 +790,7 @@ nav {
     height: 90px;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
     .skills {
         height: fit-content;
         padding: 75px 0;
@@ -840,7 +856,7 @@ nav {
     border-radius: 25px;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
     .cases {
         height: 80dvh;
     }
@@ -955,7 +971,7 @@ nav {
     transform: rotate(4deg) scale(1.05);
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
     .introduction {
         padding-top: 75px;
     }
@@ -1070,7 +1086,7 @@ nav {
     list-style-type: none;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
     .cv::after {
         top: 50%;
         width: 250px;
@@ -1163,7 +1179,7 @@ footer p {
     font-size: 12px;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
     footer .main-footer {
         height: fit-content;
     }
