@@ -861,6 +861,10 @@ nav {
     list-style-type: none;
 }
 
+.cv .button-wrapper {
+    width: auto;
+}
+
 @media screen and (max-width: 768px) {
     .cv::after {
         top: 50%;
