@@ -197,7 +197,7 @@ nav {
 }
 
 .ham-menu span {
-    height: 2px;
+    height: 3px;
     width: 100%;
     background-color: var(--white);
     border-radius: 25px;
@@ -209,10 +209,10 @@ nav {
 }
 
 .ham-menu span:nth-child(1) {
-    top: 25%;
+    top: 20%;
 }
 .ham-menu span:nth-child(3) {
-    top: 75%;
+    top: 80%;
 }
 
 .ham-menu.active span:nth-child(1) {
@@ -258,9 +258,9 @@ nav {
     }
 
     .nav-logo {
-        flex: 1 0 calc(100% - 25px);
-        width: calc(100% - 25px);
-        max-width: calc(100% - 25px);
+        flex: 1 0 calc(100% - 30px);
+        width: calc(100% - 30px);
+        max-width: calc(100% - 30px);
     }
 
     .nav-content:has(.nav-content.active) body {
