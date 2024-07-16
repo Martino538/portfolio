@@ -949,6 +949,11 @@ nav {
     gap: 20px;
 }
 
+.project-pageheader .col-left .intro-text p a {
+    text-decoration: underline;
+    color: var(--white);
+}
+
 .project-pageheader .col-left .intro-text .project-tags {
     display: flex;
     gap: 10px;
@@ -964,10 +969,17 @@ nav {
     padding: 7px 15px;
     border-radius: 10px;
     font-size: 14px;
+    display: flex;
+    align-items: center;
 }
 
 .project-pageheader .col-left .intro-text span i {
     color: var(--cyan);
+    margin-right: 5px;
+}
+
+.project-pageheader .col-left .intro-text span img {
+    width: 15px;
     margin-right: 5px;
 }
 
