@@ -8,7 +8,7 @@
     --darkgrey: #000608;
     --footer: #000305;
     --lightGrey: rgb(110, 110, 110);
-    --cyan: cyan;
+    --cyan: #00ffff;
     --main-font: "Poppins", sans-serif;
     --font-fontAwesome: "Font Awesome 6", sans-serif;
     --main-gradient: linear-gradient(90deg, rgba(0,228,255,1) 0%, rgba(0,228,255,1) 40%, #003cb8 65%, rgba(85,236,255,1) 90%, rgba(85,236,255,1) 100%);
@@ -40,15 +40,9 @@ body {
     }
 }
 
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+@media screen and (min-width: 769px) and (max-width: 1440px) {
     .container {
         padding: 0 75px;
-    }
-}
-
-@media screen and (min-width: 1025px) and (max-width: 1440px) {
-    .container {
-        padding: 0 150px;
     }
 }
 
@@ -416,49 +410,9 @@ nav {
     justify-content: center;
 }
 
-.hex {
-    width: 400px;
-    display: inline-block;
-    filter: url('#goo');
-    position: relative;
-}
-
-.hex::before {
-    content: "";
-    display: block;
-    padding-top: 135%;
-    clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
-    background: var(--hex-gradient);
-}
-
-.hex-inner {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
-    filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.7));
-}
-
-.hex-inner .content {
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
 @media screen and (max-width: 425px) {
     .pageheader .content-wrapper .col-right img {
         width: 250%;
-    }
-
-    .hex-inner .content {
-        transform: translate(-130%, -50%);
-    }
-
-    .hex {
-        width: 340px;
     }
 }
 
@@ -502,8 +456,23 @@ nav {
     .pageheader .content-wrapper .col-right {
         align-items: flex-start;
     }
+
+    .pageheader .content-wrapper .col-right img {
+        height: 500px;
+    }
 }
 
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+    .pageheader .content-wrapper .col-right img {
+        width: 35vw;
+    }
+}
+
+@media screen and (min-width: 1441px) {
+    .pageheader .content-wrapper .col-right img {
+        width: 500px;
+    }
+}
 
 /* ----- Skills ----- */
 
