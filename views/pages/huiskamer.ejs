@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('../partials/head.ejs'); %>
+        <title>Portfolio | Martijn Kooijman</title>
+    </head>
+    <body>
+        <%- include('../components/nav.ejs'); %>
+        <section class="section project-pageheader">
+            <div class="container">
+                <div class="content-wrapper">
+                    <div class="content">
+                        <div class="col-left">
+                            <div class="intro-text">
+                                <h1>Ruim de Huiskamer op</h1>
+                                <div class="project-tags">
+                                    <span><i class="fa-brands fa-html5"></i> HTML</span>
+                                    <span><i class="fa-brands fa-css3-alt"></i> CSS</span>
+                                    <span><i class="fa-brands fa-js"></i> JavaScript</span>
+                                </div>
+                                <div class="project-site">
+                                    <a href="https://api-2024.onrender.com/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-link"></i> Link naar de live website</a>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                    Ipsum, nesciunt neque, aut eius assumenda ducimus illum consectetur possimus nemo ipsam,
+                                     molestiae at ab quas perferendis facilis eos? Illo, nulla ullam!</p>
+                            </div>
+                        </div>
+                        <div class="col-right">
+                            <div class="image-wrapper">
+                                <img src="/img/living-room.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-images">
+                        <div class="col">
+                            <img src="../img/huiskamer.png" alt="">
+                        </div>
+                        <div class="col">
+                            <img src="../img/huiskamer-detail2.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <%- include('../partials/footer.ejs'); %>
+    </body>
+</html>
