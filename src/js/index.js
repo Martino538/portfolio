@@ -27,11 +27,12 @@ document.addEventListener('DOMContentLoaded', () => {
         applyGlowAnimation();
     }, 10000);
 
-    toggleHamburgerMenu();
-    if (window.page === 'index') {
+    const currentPage = document.body.getAttribute('data-page');
+    if (currentPage === 'index') {
         getGreeting();
     }
-    
+
+    toggleHamburgerMenu();
     rotateCardOnHover();
     getCurrentYear();
     window.addEventListener('scroll', setNavbarColor);
@@ -41,6 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Set greeting in pageheader
 function getGreeting() {
     const currentHour = new Date().getHours();
+    console.log("Current Hour:", currentHour);
 
     let greeting;
     if (currentHour >= 6 && currentHour < 12) {
