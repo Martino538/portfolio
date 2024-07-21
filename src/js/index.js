@@ -47,7 +47,7 @@ function getGreeting() {
         greeting = 'Goedemorgen!';
     } else if (currentHour >= 12 && currentHour < 18) {
         greeting = 'Goedemiddag!';
-    } else if (currentHour >= 18 && currentHour < 24) {
+    } else if (currentHour >= 18 && currentHour < 24) {             
         greeting = 'Goedenavond!';
     } else {
         greeting = 'Goedenacht!';
