@@ -641,6 +641,8 @@ nav {
     justify-content: center;
     align-items: center;
     border-radius: 25px;
+    position: relative;
+    overflow: hidden;
 }
 
 .swiper-slide a {
@@ -1023,6 +1025,23 @@ nav {
 
 #Path_48, #Path_47, #Path_46, #Path_45, #Path_44, #Path_43, #Path_42, #Path_41, #Path_40, #Path_39, #Path_38, #Path_37, #Path_36, #Path_35, #Path_34, #Path_33 {
     stroke-width: 1px;
+}
+
+.latest {
+    display: block;
+    color: black;
+}
+
+.latest::before {
+content: "LATEST";
+    text-align: center;
+    position: absolute;
+    width: 160px;
+    height: fit-content;
+    background-color: var(--cyan);
+    top: 15px;
+    right: -40px;
+    transform: rotate(30deg);
 }
 
 @media screen and (max-width: 768px) {
