@@ -21,6 +21,15 @@ app.get("/", async (req, res) => {
   }
 });
 
+app.get("/projects/Bannerfy", async (req, res) => {
+  try {
+    res.render('pages/bannerfy', {});
+  } catch (error) {
+    console.error('Fetching data failed:', error);
+    res.status(500).send('Failed to render data');
+  }
+});
+
 app.get("/projects/Kunst-in-c", async (req, res) => {
   try {
     res.render('pages/kunst-in-c', {});
@@ -39,14 +48,6 @@ app.get("/projects/Api", async (req, res) => {
   }
 });
 
-app.get("/projects/Dunkin", async (req, res) => {
-  try {
-    res.render('pages/dunkin', {});
-  } catch (error) {
-    console.error('Fetching data failed:', error);
-    res.status(500).send('Failed to render data');
-  }
-});
 
 app.get("/projects/Erfbelasting", async (req, res) => {
   try {
@@ -60,15 +61,6 @@ app.get("/projects/Erfbelasting", async (req, res) => {
 app.get("/projects/Fancy-Fireworks", async (req, res) => {
   try {
     res.render('pages/fancy-fireworks', {});
-  } catch (error) {
-    console.error('Fetching data failed:', error);
-    res.status(500).send('Failed to render data');
-  }
-});
-
-app.get("/projects/Huiskamer", async (req, res) => {
-  try {
-    res.render('pages/huiskamer', {});
   } catch (error) {
     console.error('Fetching data failed:', error);
     res.status(500).send('Failed to render data');

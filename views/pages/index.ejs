@@ -4,7 +4,7 @@
         <%- include('../partials/head.ejs'); %>
         <title>Portfolio | Martijn Kooijman</title>
     </head>
-    <body data-page="<%= page %>">
+    <body>
         <%- include('../components/nav.ejs'); %>
         <section class="section pageheader" id="pageheader">
             <div class="container">
@@ -14,11 +14,11 @@
                             <div class="intro-text">
                                 <p class="gradient greeting">Goedemiddag!</p>
                                 <h1>Ik ben Martijn Kooijman, <span class="gradient">Front-end Developer & UI/UX Designer</span></h1>
-                                <p>Leuk dat je interesse hebt in mijn portfolio! Ik ben een gepassioneerde Front-end developer en UX/Designer. Momenteel volg ik de opleiding Communicatie & Multimedia Design
+                                <p>Leuk dat je interesse hebt in mijn portfolio! Ik ben een gepassioneerde Front-end developer en UX/Designer, en recent afgestudeerd aan de opleiding Communicatie & Multimedia Design
                                     op de Hogeschool van Amsterdam. Kijk gerust even rond!
                                 </p>
                                 <div class="button-wrapper">
-                                    <a href="/CV-MartijnKooijman.pdf" class="btn" download="CV-MartijnKooijman.pdf"><i class="fa-solid fa-eye"></i> Bekijk CV</a>
+                                    <a href="#" class="btn" download="CV-MartijnKooijman.pdf"><i class="fa-solid fa-eye"></i> Bekijk CV</a>
                                     <a href="tel:+31612345678" class="btn btn-outline"><i class="fa-solid fa-phone"></i> Geef een belletje!</a>
                                 </div>
                             </div>
@@ -132,6 +132,11 @@
                 <div class="swiper cases-swiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
+                            <a href="/projects/bannerfy">
+                                <img src="./img/bannerfy.png" alt="Impression image of my project: Bannerfy">
+                            </a>
+                        </div>                        
+                        <div class="swiper-slide">
                             <a href="/projects/Kunst-in-c">
                                 <img src="./img/kunstinc.png" alt="Impression image of my project: Kunst-in-c">
                             </a>
@@ -226,7 +231,7 @@
                 </div>
             </article>
             <div class="button-wrapper">
-                <a href="/CV-MartijnKooijman.pdf" class="btn card-btn" download="CV-MartijnKooijman.pdf">Bekijk CV</a
+                <a href="/CV-MartijnKooijman.pdf" class="btn card-btn" download="CV-MartijnKooijman.pdf">Bekijk CV</a>
             </div>
         </section>
         <%- include('../partials/footer.ejs'); %>
