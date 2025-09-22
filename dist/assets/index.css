@@ -1228,7 +1228,7 @@ nav {
 
 .project-pageheader .col-right img {
     width: 400px;
-    height: 100%;
+    height: fit-content;
     object-fit: cover;
 }
 
