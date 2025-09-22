@@ -1283,7 +1283,7 @@ nav {
 @media screen and (min-width: 769px) and (max-width: 1024px) {
     .project-pageheader .col-right img {
         width: 200px;
-        height: 200px;
+        height: fit-content
     }
 
     .project-pageheader .project-images .col {
