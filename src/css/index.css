@@ -1003,7 +1003,7 @@ nav {
 
 .project-pageheader .col-right img {
     width: 400px;
-    height: 100%;
+    height: fit-content;
     object-fit: cover;
 }
 
@@ -1058,7 +1058,7 @@ nav {
 @media screen and (min-width: 769px) and (max-width: 1024px) {
     .project-pageheader .col-right img {
         width: 200px;
-        height: 200px;
+        height: fit-content;
     }
 
     .project-pageheader .project-images .col {
@@ -1071,7 +1071,7 @@ nav {
 @media screen and (min-width: 1025px) and (max-width: 1440px) {
     .project-pageheader .col-right img {
         width: 300px;
-        height: 300px;
+        height: fit-content;
     }
 }
 
