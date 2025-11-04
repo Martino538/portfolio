@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     slidesPerView: 1.25,
     spaceBetween: 20,
     grabCursor: true,
-    loop: true,
+    // loop: true,
     initialSlide: 0,
     slidesOffsetBefore: 20,
     autoplay: {
