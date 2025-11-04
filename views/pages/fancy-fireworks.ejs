@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('../partials/head.ejs'); %>
+        <title>Portfolio | Martijn Kooijman</title>
+    </head>
+    <body>
+        <%- include('../components/nav.ejs'); %>
+        <section class="section project-pageheader">
+            <div class="container">
+                <div class="content-wrapper">
+                    <div class="content">
+                        <div class="col-left">
+                            <div class="intro-text">
+                                <h1>Fancy Fireworks</h1>
+                                <div class="project-tags">
+                                    <span><i class="fa-brands fa-html5"></i> HTML</span>
+                                    <span><i class="fa-brands fa-css3-alt"></i> CSS</span>
+                                </div>
+                                <div class="project-site">
+                                    <a href="https://martino538.github.io/CSS-2-TheRescue/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-link"></i> Link naar de live website</a>
+                                </div>
+                                <p>Dit project is ontstaan tijdens de minor Webdevelopment die ik tijdens mijn opleiding heb gevolgd. De opdracht was om een vuurwerk show te maken,
+                                    waarbij je alleen van HTML en CSS gebruik mocht maken. Om dit project te realiseren is dus helemaal geen JavaScript gebruikt. Hierdoor heb ik veel 
+                                    nieuwe selectoren leren kennen en heb ik ingezien dat soms een oplossing zelfs beter kan zijn met CSS dan meteen JavaScript te raadplegen.</p>
+                            </div>
+                        </div>
+                        <div class="col-right">
+                            <div class="image-wrapper">
+                                <img src="/img/firework-logo.png" alt="Logo of fireworks">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-images">
+                        <div class="col">
+                            <img src="../img/fancyfw-detail3.png" alt="Impression image of my project">
+                        </div>
+                        <div class="col">
+                            <img src="../img/fancyfw-detail2.png" alt="Impression image of my project">
+                        </div>
+                        <div class="col">
+                            <img src="../img/fancy-fireworks.png" alt="Impression image of my project">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <%- include('../partials/footer.ejs'); %>
+    </body>
+</html>

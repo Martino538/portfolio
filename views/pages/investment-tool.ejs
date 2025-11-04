@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('../partials/head.ejs'); %>
+        <title>Portfolio | Martijn Kooijman</title>
+    </head>
+    <body>
+        <%- include('../components/nav.ejs'); %>
+        <section class="section project-pageheader">
+            <div class="container">
+                <div class="content-wrapper">
+                    <div class="content">
+                        <div class="col-left">
+                            <div class="intro-text">
+                                <h1>Investment Tool</h1>
+                                <div class="project-tags">
+                                    <span><i class="fa-brands fa-html5"></i> HTML</span>
+                                    <span><i class="fa-brands fa-css3-alt"></i> CSS</span>
+                                    <span><i class="fa-brands fa-react"></i> React</span>
+                                </div>
+                                <div class="project-site">
+                                    <a href="https://investment-app-se11.onrender.com" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-link"></i> Link naar de live website</a>
+                                </div>
+                                <p>Tijdens dit project heb ik niet alleen kennis gemaakt met React, maar ook daadwerkelijk belangrijke kernbegrippen toegepast. 
+                                    Ik heb gewerkt aan het opzetten van component-based structuren en geleerd hoe ik data dynamisch kan weergeven met behulp van props, state en events. 
+                                    Dit project heeft mij laten inzien hoe krachtig React kan zijn bij het bouwen van moderne, schaalbare webapplicaties en hoe belangrijk het is om 
+                                    gestructureerd te werken binnen een frontend-framework.</p>
+                            </div>
+                        </div>
+                        <div class="col-right">
+                            <div class="image-wrapper">
+                                <img src="/img/investment-calculator-logo.png" alt="Logo of my investment-tool project">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-images">
+                        <div class="col">
+                            <img src="../img/investment-project.png" alt="Impression image of my project">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <%- include('../partials/footer.ejs'); %>
+    </body>
+</html>

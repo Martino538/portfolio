@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('../partials/head.ejs'); %>
+        <title>Portfolio | Martijn Kooijman</title>
+    </head>
+    <body>
+        <%- include('../components/nav.ejs'); %>
+        <section class="section project-pageheader">
+            <div class="container">
+                <div class="content-wrapper">
+                    <div class="content">
+                        <div class="col-left">
+                            <div class="intro-text">
+                                <h1>Countdown Game</h1>
+                                <div class="project-tags">
+                                    <span><i class="fa-brands fa-html5"></i> HTML</span>
+                                    <span><i class="fa-brands fa-css3-alt"></i> CSS</span>
+                                    <span><i class="fa-brands fa-react"></i> React</span>
+                                </div>
+                                <div class="project-site">
+                                    <a href="https://countdown-game.onrender.com" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-link"></i> Link naar de live website</a>
+                                </div>
+                                <p>Tijdens dit project heb ik een interactieve game gebouwd in React waarin gebruikers een timer moeten stoppen op het exacte moment. 
+                                    Bijvoorbeeld: blok 1 heeft een timer van 1 seconde, en wanneer je op “start” drukt, moet je zo nauwkeurig mogelijk op “stop” klikken. 
+                                    Druk je te laat, dan verschijnt er een modal met een melding; druk je op tijd, dan wordt je score getoond. </br></br> Bij de ontwikkeling heb ik niet alleen 
+                                    gewerkt met component-based structuren, maar ook met meer geavanceerde React-concepten zoals refs om timers nauwkeurig te controleren en 
+                                    portals om modals buiten de hoofdcomponentstructuur te renderen. Daarnaast heb ik dynamische dataweergave en state management toegepast 
+                                    via props, state en events, wat cruciaal was voor het realtime gedrag van de game.</p>
+                            </div>
+                        </div>
+                        <div class="col-right">
+                            <div class="image-wrapper">
+                                <img src="/img/countdown-logo.png" alt="Logo of my Countdown Game project">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-images">
+                        <div class="col">
+                            <img src="/img/countdown-project.png" alt="Impression image of my project">
+                        </div>
+                        <div class="col">
+                            <img src="/img/countdown-project2.png" alt="Impression image of my project">
+                        </div>
+                        <div class="col">
+                            <img src="/img/countdown-project3.png" alt="Impression image of my project">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <%- include('../partials/footer.ejs'); %>
+    </body>
+</html>

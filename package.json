@@ -1,0 +1,29 @@
+{
+  "name": "api-2324",
+  "version": "1.0.0",
+  "description": "In dit vier weken durende vak zullen we de kracht van het web ervaren en kijken hoe we (mobiele) web apps kunnen maken die net zo aantrekkelijk zijn als native mobiele apps.",
+  "type": "module",
+  "scripts": {
+    "dev": "npm-run-all --parallel dev:*",
+    "dev:server": "npx cross-env NODE_ENV=development nodemon server.js --ext js,ejs",
+    "dev:client": "vite --config vite.config.js",
+    "build": "vite build",
+    "prod": "npx cross-env NODE_ENV=production node server.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "gsap": "^3.12.5",
+    "npm-run-all": "^4.1.5",
+    "swiper": "^11.2.10",
+    "vite": "^5.2.6",
+    "vite-plugin-eslint": "^1.8.1"
+  },
+  "devDependencies": {
+    "cross-env": "^10.1.0",
+    "ejs": "^3.1.10",
+    "nodemon": "^3.1.0",
+    "vite-plugin-ejs": "^1.7.0"
+  }
+}

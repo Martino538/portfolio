@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('../partials/head.ejs'); %>
+        <title>Portfolio | Martijn Kooijman</title>
+    </head>
+    <body>
+        <%- include('../components/nav.ejs'); %>
+        <section class="section project-pageheader">
+            <div class="container">
+                <div class="content-wrapper">
+                    <div class="content">
+                        <div class="col-left">
+                            <div class="intro-text">
+                                <h1>Formulier erfbelasting</h1>
+                                <div class="project-tags">
+                                    <span><i class="fa-brands fa-html5"></i> HTML</span>
+                                    <span><i class="fa-brands fa-css3-alt"></i> CSS</span>
+                                    <span><i class="fa-brands fa-js"></i> JavaScript</span>
+                                </div>
+                                <div class="project-site">
+                                    <a href="https://martino538.github.io/Browser-technologies/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-link"></i> Link naar de live website</a>
+                                </div>
+                                <p>Dit project heb ik gemaakt tijdens de minor Webdevelopment die ik tijdens mijn opleiding heb gevolgd. Hierbij moesten we het huidige formulier voor de 
+                                    erfbelasting digitaliseren, moderniseren en verbeteren. Door dit project heb ik veel geleerd over localstorage en meerdere vormen van validatie.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-right">
+                            <div class="image-wrapper">
+                                <img src="../img/Logo-belastingdienst.jpg" alt="Logo of the belastingdienst">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-images">
+                        <div class="col">
+                            <img src="../img/belastingdienst.png" alt="Impression image of my project">
+                        </div>
+                        <div class="col">
+                            <img src="../img/belastingdienst-detail2.png" alt="Impression image of my project">
+                        </div>
+                        <div class="col">
+                            <img src="../img/belastingdienst-detail3.png" alt="Impression image of my project">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <%- include('../partials/footer.ejs'); %>
+    </body>
+</html>

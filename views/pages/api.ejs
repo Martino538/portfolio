@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('../partials/head.ejs'); %>
+        <title>Portfolio | Martijn Kooijman</title>
+    </head>
+    <body>
+        <%- include('../components/nav.ejs'); %>
+        <section class="section project-pageheader">
+            <div class="container">
+                <div class="content-wrapper">
+                    <div class="content">
+                        <div class="col-left">
+                            <div class="intro-text">
+                                <h1>Schoolproject: API</h1>
+                                <div class="project-tags">
+                                    <span><i class="fa-solid fa-code"></i> API</span>
+                                    <span><i class="fa-brands fa-node-js"></i> Node.js</span>
+                                    <span><i class="fa-brands fa-js"></i> EJS</span>
+                                    <span><i class="fa-brands fa-html5"></i> HTML</span>
+                                    <span><i class="fa-brands fa-css3-alt"></i> CSS</span>
+                                </div>
+                                <div class="project-site">
+                                    <a href="https://api-2024.onrender.com/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-link"></i> Link naar de live website</a>
+                                </div>
+                                <p>Tijdens dit project heb ik mogen werken met de film API van 
+                                    <a href="https://developer.themoviedb.org/reference/intro/getting-started"  target="_blank" rel="noopener noreferrer">TMDB</a>. Hierbij heb ik
+                                geprobeerd mijn eigen mini Netflix te creëren. Door dit project heb ik geleerd om met EJS te werken, een javascript templating taal. Hiernaast heb ik een 
+                                introductie gemaakt tot Swiper.js en GSAP om leuke interactive animaties te creëren (Het laden van de website kan even duren i.v.m. de hosting).</p>
+                            </div>
+                        </div>
+                        <div class="col-right">
+                            <div class="image-wrapper">
+                                <img src="../img/api-logo.png" alt="Logo of my API project">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-images">
+                        <div class="col">
+                            <img src="../img/api.png" alt="Impression image of my project">
+                        </div>
+                        <div class="col">
+                            <img src="../img/Api-detail2.png" alt="Impression image of my project">
+                        </div>
+                        <div class="col">
+                            <img src="../img/Api-detail3.png" alt="Impression image of my project">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <%- include('../partials/footer.ejs'); %>
+    </body>
+</html>

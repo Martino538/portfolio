@@ -1,0 +1,20 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/3e283a8eef.js" crossorigin="anonymous"></script>
+    <% if (process.env.NODE_ENV === "development") { %>
+        <script type="module" src="http://localhost:5173/@vite/client" defer></script>
+        <script type="module" src="http://localhost:5173/src/js/index.js" defer></script>
+        <link rel="stylesheet" href="http://localhost:5173/src/css/index.css">
+    <% } else { %>
+        <link rel="stylesheet" href="/assets/index.css">
+        <script type="module" src="/assets/index.js" defer></script>
+        <script type="nomodule" src="/assets/polyfills-legacy.js" defer></script>
+        <script type="nomodule" src="/assets/main-legacy.js" defer></script>
+    <% } %>
+    <link rel="icon" type="image/png" href="/img/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/img/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/img/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="/img/favicon/site.webmanifest" />
+</head>
