@@ -13,6 +13,7 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
 // Static files
+app.use(express.static(path.resolve('dist')));
 app.use(express.static(path.join(__dirname, "public"))); // CSS, JS, images, PDF, favicon, etc.
 
 // Routes
