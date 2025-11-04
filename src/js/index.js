@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // loop: true,
     initialSlide: 0,
     slidesOffsetBefore: 20,
+    slidesOffsetAfter: 20,
     autoplay: {
         delay: 10000,
     },
