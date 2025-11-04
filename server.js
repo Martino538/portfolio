@@ -1,22 +1,19 @@
-import dotenv from 'dotenv';
-import express from 'express';
+import express from "express";
+import path from "path";
+import { fileURLToPath } from "url";
 
-dotenv.config();
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Create an Express application
 const app = express();
 
 // Middleware setup
-app.use(express.urlencoded({ extended: true }));
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "views"));
 
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static('dist'));   // gebundelde assets
-  app.use(express.static('public')); // PDF, favicon, img etc.
-} else {
-  app.use(express.static('public')); // dev: alleen public
-}
-
-app.set('view engine', 'ejs');
+// Static files
+app.use(express.static(path.join(__dirname, "public"))); // CSS, JS, images, PDF, favicon, etc.
 
 // Routes
 app.get("/", async (req, res) => {
