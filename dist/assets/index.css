@@ -577,7 +577,7 @@ body {
     padding: 0;
     font-family: var(--main-font);
     color: var(--white);
-    background-color: var(--grey);
+    background-color: var(--darkgrey);
 }
 
 /* ----- Utility classes ----- */
@@ -878,6 +878,7 @@ nav {
     border-radius: 50%;
     filter: blur(75px);
     opacity: 0.3;
+    z-index: 2;
 }
 
 .pageheader::after {
@@ -1017,7 +1018,7 @@ nav {
 
 @media screen and (min-width: 1441px) {
     .pageheader .content-wrapper .col-right img {
-        width: 400px;
+        width: 500px;
     }
 }
 
@@ -1238,6 +1239,7 @@ nav {
 
 .slide-info {
     margin-top: 20px;
+    min-height: 140px;
 }
 
 .slide-info p {

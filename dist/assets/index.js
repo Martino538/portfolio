@@ -5009,107 +5009,110 @@ document.addEventListener("DOMContentLoaded", () => {
     slidesPerView: 1.25,
     spaceBetween: 20,
     grabCursor: true,
-    // loop: true,
     initialSlide: 0,
     slidesOffsetBefore: 20,
+    slidesOffsetAfter: 20,
     autoplay: {
       delay: 1e4
     },
     breakpoints: {
-      426: {
-        slidesPerView: 1.5
-      },
-      769: {
-        slidesPerView: 2.5
-      },
-      1250: {
-        slidesPerView: 3.5
-      }
+      426: { slidesPerView: 1.5 },
+      769: { slidesPerView: 2.5 },
+      1250: { slidesPerView: 3.5 }
     },
     pagination: {
       el: ".swiper-pagination",
       clickable: true
     }
   });
-  applyGlowAnimation();
-  setInterval(() => {
-    applyGlowAnimation();
-  }, 1e4);
-  toggleHamburgerMenu();
-  rotateCardOnHover();
-  getCurrentYear();
-  window.addEventListener("scroll", setNavbarColor);
-  window.addEventListener("scroll", changeNavActive);
-});
-function toggleHamburgerMenu() {
-  const hamMenu = document.querySelector(".ham-menu");
-  const offScreenMenu = document.querySelector(".nav-content");
-  const menuLinks = document.querySelectorAll(".nav-content ul li a");
-  const body = document.body;
-  hamMenu.addEventListener("click", () => {
-    hamMenu.classList.toggle("active");
-    offScreenMenu.classList.toggle("active");
-    if (hamMenu.classList.contains("active")) {
-      body.style.overflow = "hidden";
-    } else {
-      body.style.overflow = "";
-    }
-  });
-  menuLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-      hamMenu.classList.remove("active");
-      hamMenu.classList.add("closed");
-      offScreenMenu.classList.remove("active");
-      offScreenMenu.classList.add("closed");
-      body.style.overflow = "";
+  const skills = document.querySelectorAll(".skill-image");
+  function applyGlowAnimation() {
+    skills.forEach((skill, index) => {
+      setTimeout(() => {
+        skill.style.animation = "glow 1.5s alternate";
+        skill.addEventListener("animationend", () => {
+          skill.style.animation = "none";
+        });
+      }, index * 150);
     });
-  });
-}
-function rotateCardOnHover() {
-  const cardBtn = document.querySelector(".card-btn");
-  const cvCard = document.querySelector(".cv-card");
-  cardBtn.addEventListener("mouseenter", function() {
-    cvCard.style.transform = "rotate(0deg)";
-  });
-  cardBtn.addEventListener("mouseleave", function() {
-    cvCard.style.transform = "rotate(-4deg)";
-  });
-}
-function getCurrentYear() {
-  const currentYear = document.querySelector("#currentYear");
-  const newYearDate = (/* @__PURE__ */ new Date()).getFullYear();
-  currentYear.innerHTML = newYearDate;
-}
-function setNavbarColor() {
-  const navbar = document.querySelector("header");
-  if (window.scrollY > 0) {
-    navbar.style.backgroundColor = "rgba(0, 6, 8, 0.9)";
-  } else {
-    navbar.style.backgroundColor = "transparent";
   }
-}
-function changeNavActive() {
-  const navLinks = document.querySelectorAll(".nav-content ul li a");
-  let fromTop = window.scrollY;
-  navLinks.forEach((link) => {
-    let section = document.querySelector(link.hash);
-    if (section) {
-      if (section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
-        link.classList.add("nav-active");
+  applyGlowAnimation();
+  setInterval(applyGlowAnimation, 1e4);
+  function toggleHamburgerMenu() {
+    const hamMenu = document.querySelector(".ham-menu");
+    const offScreenMenu = document.querySelector(".nav-content");
+    const menuLinks = document.querySelectorAll(".nav-content ul li a");
+    const body = document.body;
+    if (!hamMenu || !offScreenMenu) return;
+    hamMenu.addEventListener("click", () => {
+      hamMenu.classList.toggle("active");
+      offScreenMenu.classList.toggle("active");
+      body.style.overflow = hamMenu.classList.contains("active") ? "hidden" : "";
+    });
+    menuLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        hamMenu.classList.remove("active");
+        hamMenu.classList.add("closed");
+        offScreenMenu.classList.remove("active");
+        offScreenMenu.classList.add("closed");
+        body.style.overflow = "";
+      });
+    });
+  }
+  toggleHamburgerMenu();
+  function rotateCardOnHover() {
+    const cardBtn = document.querySelector(".card-btn");
+    const cvCard = document.querySelector(".cv-card");
+    if (!cardBtn || !cvCard) return;
+    cardBtn.addEventListener("mouseenter", () => {
+      cvCard.style.transform = "rotate(0deg)";
+    });
+    cardBtn.addEventListener("mouseleave", () => {
+      cvCard.style.transform = "rotate(-4deg)";
+    });
+  }
+  rotateCardOnHover();
+  function getCurrentYear() {
+    const currentYear = document.querySelector("#currentYear");
+    if (!currentYear) return;
+    currentYear.innerHTML = (/* @__PURE__ */ new Date()).getFullYear();
+  }
+  getCurrentYear();
+  function setNavbarColor() {
+    const navbar = document.querySelector("header");
+    if (!navbar) return;
+    navbar.style.backgroundColor = window.scrollY > 0 ? "rgba(0, 6, 8, 0.9)" : "transparent";
+  }
+  function changeNavActive() {
+    const navLinks = document.querySelectorAll(".nav-content ul li a");
+    let fromTop = window.scrollY;
+    let foundActive = false;
+    navLinks.forEach((link) => {
+      const section = document.querySelector(link.hash);
+      if (section) {
+        if (section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
+          link.classList.add("nav-active");
+          foundActive = true;
+        } else {
+          link.classList.remove("nav-active");
+        }
       } else {
         link.classList.remove("nav-active");
       }
+      if (!foundActive) {
+        const projectLink = document.querySelector('a[href*="#cases"], a[href*="/#cases"]');
+        if (projectLink) projectLink.classList.add("nav-active");
+      }
+    });
+  }
+  window.addEventListener("scroll", setNavbarColor);
+  window.addEventListener("scroll", changeNavActive);
+  setNavbarColor();
+  changeNavActive();
+  if (window.location.hash) {
+    const target = document.querySelector(window.location.hash);
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth" });
     }
-  });
-}
-const skills = document.querySelectorAll(".skill-image");
-function applyGlowAnimation() {
-  skills.forEach((skill, index) => {
-    setTimeout(() => {
-      skill.style.animation = "glow 1.5s alternate";
-      skill.addEventListener("animationend", () => {
-        skill.style.animation = "none";
-      });
-    }, index * 150);
-  });
-}
+  }
+});
