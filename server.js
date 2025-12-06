@@ -81,6 +81,15 @@ app.get("/projects/Runite", async (req, res) => {
   }
 });
 
+app.get("/projects/quiz", async (req, res) => {
+  try {
+    res.render('pages/quiz', { page: 'project' });
+  } catch (error) {
+    console.error('Fetching data failed:', error);
+    res.status(500).send('Failed to render data');
+  }
+});
+
 app.get("/projects/Fancy-Fireworks", async (req, res) => {
   try {
     res.render('pages/fancy-fireworks', { page: 'project' });
